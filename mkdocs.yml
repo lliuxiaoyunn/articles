@@ -1,1 +1,10 @@
-site_name: My Docs
+site_name: AllenArticles
+
+nav:
+        - 'Home': 'index.md'
+        - 'jmeter性能测试只想登录一次怎么做': 'jmeter性能测试只想登录一次怎么做.md'
+        - '不写代码搞定jmeter响应结果中文乱码': '不写代码搞定jmeter响应结果中文乱码.md'
+
+theme: readthedocs
+
+
