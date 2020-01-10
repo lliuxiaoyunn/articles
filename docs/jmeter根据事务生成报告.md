@@ -2,7 +2,7 @@ jmeter根据事务生成报告[原创]
 
 ​	平时大家在使用jmeter做接口性能测试的时候，都喜欢用聚合报告或汇总报告，但是大家在使用过程中，进程会遇到一个问题，没个接口在聚合报告中，都生成一条报告数据，如果有n多个接口，就生成n多条数据。
 
-![conventionDesign2](../image/conventionDesign2.gif)
+![conventionDesign2](https://github.com/wohuyuelong/articles/blob/master/image/conventionDesign2.gif)
 
 而实际诉求可能是，<u>多个接口是一个业务，我想对一个整体业务做性能测试，得到整个业务的性能测试报告数据</u>，明显上面的不符，哪我们要怎么做呢？
 
