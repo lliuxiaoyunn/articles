@@ -1,7 +1,14 @@
+
 site_name: AllenArticles
+site_description: 湖南省柠檬信息技术有限公司-allen老师个人技术博客
+site_author: allen
+copyright: 湖南省柠檬信息技术有限公司-allen老师
 
 nav:
-        - 'Home': 'index.md'
+        - Home: 'index.md'
+        - jmeter:
+                - 'Jmeter性能测试只想登录一次怎么做': 'jmeter性能测试只想登录一次怎么做.md'
+                - '不写代码搞定jmeter响应结果中文乱码': '不写代码搞定jmeter响应结果中文乱码.md'
         - 'jmeter性能测试只想登录一次怎么做': 'jmeter性能测试只想登录一次怎么做.md'
         - '不写代码搞定jmeter响应结果中文乱码': '不写代码搞定jmeter响应结果中文乱码.md'
 

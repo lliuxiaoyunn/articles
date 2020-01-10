@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>jmeter性能测试只想登录一次怎么做 - AllenArticles</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "jmeter\u6027\u80fd\u6d4b\u8bd5\u53ea\u60f3\u767b\u5f55\u4e00\u6b21\u600e\u4e48\u505a";
+    var mkdocs_page_input_path = "jmeter\u6027\u80fd\u6d4b\u8bd5\u53ea\u60f3\u767b\u5f55\u4e00\u6b21\u600e\u4e48\u505a.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> AllenArticles</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Welcome to MkDocs</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">jmeter性能测试只想登录一次怎么做</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#jmeter">jmeter需先登录的接口如何做性能测试？</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../不写代码搞定jmeter响应结果中文乱码/">不写代码搞定jmeter响应结果中文乱码</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">AllenArticles</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>jmeter性能测试只想登录一次怎么做</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="jmeter">jmeter需先登录的接口如何做性能测试？</h1>
+<p>​   我们的实际工作中，需要先登录，然后才能做某些操作的现象非常常见。但是，对于一个刚刚学会用jmeter做性能测试的人来说，这可能是自己的性能测试之路的第一个坎。</p>
+<p>​   为什么这么说呢？</p>
+<p>​   首先，从这个诉求中，我们至少能提取出两个重要信息，1、需要登录；2、登录后才能做，以为着登录之后的接口，都有登录认证，判断是否登录，登录认证未通过，那么接口请求就会失败。</p>
+<p>​   那么好了，问题来了。我做性能测试，是需要用多个虚拟用户来实现并发的。<strong>场景一：</strong>我是用把所有虚拟用户使用同一个用户账户，每次都是先调登录接口，再调登录之后接口请求吗？如果你的系统，业务上允许一个用户在不退出情况下，反复登录，且没有登录次数限制，这种最理想的情况，你完全可以这么做。做完了，你可能会想，我不用一个账户，100个并发用户数，我就用100个独立账户，</p>
+<p><strong>场景二：</strong>每个虚拟用户都试用一个独立账户，还是先调登录，再调登录之后接口请求，这样可以吗，要怎么做？当然可以，做法也非常简单，就是在你的线程组里面用上“csv数据文件设置”读取出用户账户信息，或者用JDBCrequest从数据库获取出用户信息，然后再在登录接口中用取出的用户信息来登录。这样，在性能测试时，就会循环使用你用户总量中的用户来发送请求，这样，理论上是行的通的，但是，现实有些骨干，因为我们做性能测试，使用的是高并发，可能存在竞争关系，就可能出现后续接口，使用的关联参数可能取不到值，从而导致请求报错，而这种错误，不是性能测试服务器响应报错，而是脚本问题导致报错，影响我们对性能结果的判断。那么，我们就会问，还有没有其他办法呢？</p>
+<p><strong>场景三：</strong>用一定量的用户登录一次，登录之后，再去调其他接口，是不是也可以呢？下面，我就重点讲讲这种做法。</p>
+<p><img alt="jmscript" src="../image/jmscript.gif" /></p>
+<p>​   是不是，看了上面的动画，还是没有明白？</p>
+<p>​   下面，给大家解释一下，我们在一个普通的线程组下面，新增一个逻辑控制器中的‘仅一次控制器’，在这个控制器下面，新增一个 login登录接口的请求；再在仅一次逻辑控制器平级的位置添加如 ‘重置密码’‘修改密码’等接口(模拟你的需要登录之后才能调用的接口)，因为接口需要关联，所以，在登录接口下添加一个后置处理器(json提取器)，提取出参数，最为后续接口的输入参数，实现接口关联。</p>
+<p>​   从上面，是不是发现，线程数设置5，登录接口总共调用5次，而其他接口，在整个测试运行过程中，一直运行。</p>
+<p><img alt="AggregateReport" src="../image/AggregateReport.jpg" /></p>
+<p>从最后的这个聚合报告，我们也可以看出，login接口，总共调用5次，重置密码接口分别对5个用户进行了并发请求(从后缀可以看出)，只是需要明确，并发请求，并不代表整个过程每个用户的并发总次数相等(从样本总数不同可以看出)。</p>
+<p>好了，你是否已经懂得需要先登录才能请求的接口，性能测试脚本该怎么写了呢？附带衍生的知识点是否get到了？</p>
+<blockquote>
+<p>想要获取更多有趣有料的测试知识，欢迎关注 <strong>柠檬班</strong> 微信公众号。</p>
+</blockquote>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../不写代码搞定jmeter响应结果中文乱码/" class="btn btn-neutral float-right" title="不写代码搞定jmeter响应结果中文乱码">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Welcome to MkDocs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../不写代码搞定jmeter响应结果中文乱码/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

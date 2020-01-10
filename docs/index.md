@@ -1,8 +1,8 @@
 # Welcome to MkDocs
 
 nav:
-- [jmeter性能测试只想登录一次怎么做.md, jmeter]
-- [不写代码搞定jmeter响应结果中文乱码.md, nogui]
+   - [jmeter性能测试只想登录一次怎么做.md, jmeter]
+   - [不写代码搞定jmeter响应结果中文乱码.md, nogui]
 
 ## Commands
 
