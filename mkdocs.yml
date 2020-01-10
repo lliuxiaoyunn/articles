@@ -7,10 +7,14 @@ copyright: 湖南省柠檬信息技术有限公司-allen老师
 nav:
         - Home: 'index.md'
         - jmeter:
-                - 'Jmeter性能测试只想登录一次怎么做': 'jmeter性能测试只想登录一次怎么做.md'
-                - '不写代码搞定jmeter响应结果中文乱码': '不写代码搞定jmeter响应结果中文乱码.md'
-        - 'jmeter性能测试只想登录一次怎么做': 'jmeter性能测试只想登录一次怎么做.md'
-        - '不写代码搞定jmeter响应结果中文乱码': '不写代码搞定jmeter响应结果中文乱码.md'
+                - 'jmeter根据事务生成报告': 'jmeter根据事务生成报告'
+                - 'jmeter跨平台csv文件路径该如何设置': 'jmeter跨平台csv文件路径该如何设置'
+                - 'jmeter跨线程组取参数的两种方法': 'jmeter跨线程组取参数的两种方法'
+                - 'jmeter鲜为人知的jsonpath用法': 'jmeter鲜为人知的jsonpath用法'
+                - '完全随机用户注册，如何继续完成登录及之后操作': '完全随机用户注册，如何继续完成登录及之后操作'
+                - '最新版jmeter写soap协议接口请求': '最新版jmeter写soap协议接口请求'
+                - 'Jmeter性能测试只想登录一次怎么做': 'jmeter性能测试只想登录一次怎么做'
+                - '不写代码搞定jmeter响应结果中文乱码': '不写代码搞定jmeter响应结果中文乱码'
 
 theme: readthedocs
 
