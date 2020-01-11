@@ -5,16 +5,19 @@ site_author: allen
 copyright: 湖南省柠檬信息技术有限公司-allen老师
 
 nav:
-        - Home: 'index.md'
+        - Home: 'README.md'
         - jmeter:
-                - 'jmeter根据事务生成报告': 'jmeter根据事务生成报告.md'
-                - 'jmeter跨平台csv文件路径该如何设置': 'jmeter跨平台csv文件路径该如何设置.md'
-                - 'jmeter跨线程组取参数的两种方法': 'jmeter跨线程组取参数的两种方法.md'
-                - 'jmeter鲜为人知的jsonpath用法': 'jmeter鲜为人知的jsonpath用法.md'
-                - '完全随机用户注册，如何继续完成登录及之后操作': '完全随机用户注册，如何继续完成登录及之后操作.md'
-                - '最新版jmeter写soap协议接口请求': '最新版jmeter写soap协议接口请求.md'
-                - 'Jmeter性能测试只想登录一次怎么做': 'jmeter性能测试只想登录一次怎么做.md'
-                - '不写代码搞定jmeter响应结果中文乱码': '不写代码搞定jmeter响应结果中文乱码.md'
+                - '环境安装': 'jmeter环境安装.md'
+                - '提取列表最后一个值': 'Jmeter不写代码，秒秒钟提取动态列表最后一个值.md'
+                - '不写代码搞定结果中文': '不写代码搞定jmeter响应结果中文乱码.md'
+                - '最新版写soap接口': '最新版jmeter写soap协议接口请求.md'
+                - '跨平台读取csv文件设置': 'jmeter跨平台csv文件路径该如何设置.md'
+                - '跨线程组取参': 'jmeter跨线程组取参数的两种方法.md'
+                - 'jsonpath的用法': 'jmeter鲜为人知的jsonpath用法.md'
+                - '登录一次性能测试': 'jmeter性能测试只想登录一次怎么做.md'
+                - '根据事务生成报告': 'jmeter根据事务生成报告.md'
+                - '随机用户注册登录及之后操作': '完全随机用户注册，如何继续完成登录及之后操作.md'
+                - '临界部分控制器使用': 'critical section controller(临界部分控制器)到底该如何用.md'
 
 theme: readthedocs
 
