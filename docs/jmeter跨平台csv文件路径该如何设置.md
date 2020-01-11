@@ -12,15 +12,15 @@ jmeter跨平台时，csv文件路径该如何设置[原创]
 
 ​	然后，在jmeter中，添加 配置元件 > csv数据文件设置，在文件路径中，写上 ${\_\_P(ser.dir,)}${__P(file.separator,)}userdata1216.txt ，其中 userdata1216.txt为你的数据文件名称。
 
-![image-20191216180554673](../image/image-54673.png)
+![image-20191216180554673](image/image-54673.png)
 
 好了， 就这样ok了，这样你的只要把你的测试数据文件上传到执行你脚本机器jmeter的bin路径下，这个脚本就可以跨平台执行了。
 
 ​	哪为什么这样写就可以跨平台呢？首先，大家要知道__P()这个函数，这是一个获取属性的函数。明白这点，那应该就能想明白user.dir 和 file.separator 都是属性。接下来，就又会问了，这两个属性，他们的值会是什么呢？下面，我们再看两张图
 
-![image-20191216184952023](../image/image-52023.png)
+![image-20191216184952023](image/image-52023.png)
 
-![linuxsystem](../image/linuxsystem.jpg)
+![linuxsystem](image/linuxsystem.jpg)
 
 看懂了吗？
 

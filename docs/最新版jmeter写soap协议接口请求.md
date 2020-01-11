@@ -10,21 +10,21 @@
 
 ​	第二，打开jmeter，进入options > Plugins Manager (如果没有这个，则需要去下载jmeter的plugin-manager-*.jar包，然后放到jmeter的/lib/ext文件夹中，再启动jmeter)，
 
-![PluginsManager_1.png](/image/PluginsManager_1.png)
+![PluginsManager_1.png](image/PluginsManager_1.png)
 
 在弹出窗口中，选择Available Plugins 在搜索框中，输入soap 空格一下
 
-![AvailablePlugins_1.png](/image/AvailablePlugins_1.png)
+![AvailablePlugins_1.png](image/AvailablePlugins_1.png)
 
   就会出现一个custom soap sampler 的插件，勾选，点击右下角的‘Apply Changes and Restart Jmeter’ 等待下载安装完成，会自动重启。
 
   重启后，添加线程组，右键 > 取样器 
   
-![SoapSampler_1.png](../image/SoapSampler_1.png)
+![SoapSampler_1.png](image/SoapSampler_1.png)
 
 此时，就会看到一个Custom SOAP Sampler的取样器。
 
-![CoustomSoap_1.png](../image/CoustomSoap_1.png)
+![CoustomSoap_1.png](image/CoustomSoap_1.png)
 
 在这个页面中，URL地址中，输入你要请求的地址(注意：默认soap版本是1.2)，然后在SOAP Envelope中粘贴soap1.2的请求xml。
 

@@ -12,7 +12,7 @@
 
 **场景三：**用一定量的用户登录一次，登录之后，再去调其他接口，是不是也可以呢？下面，我就重点讲讲这种做法。
 
-![jmscript](../image/jmscript.gif)
+![jmscript](image/jmscript.gif)
 
 ​	是不是，看了上面的动画，还是没有明白？
 
@@ -20,7 +20,7 @@
 
 ​	从上面，是不是发现，线程数设置5，登录接口总共调用5次，而其他接口，在整个测试运行过程中，一直运行。
 
-![AggregateReport](../image/AggregateReport.jpg)
+![AggregateReport](image/AggregateReport.jpg)
 
 从最后的这个聚合报告，我们也可以看出，login接口，总共调用5次，重置密码接口分别对5个用户进行了并发请求(从后缀可以看出)，只是需要明确，并发请求，并不代表整个过程每个用户的并发总次数相等(从样本总数不同可以看出)。
 

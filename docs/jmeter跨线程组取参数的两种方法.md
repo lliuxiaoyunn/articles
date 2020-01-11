@@ -2,7 +2,7 @@
 
 如果你工作中已经在用jmeter做接口测试，或性能测试了，你可能会遇到一个麻烦，哪就是jmeter的变量值不能跨线程组传递。
 
-![p1.jpg](../image/p1.jpg)
+![p1.jpg](image/p1.jpg)
 
 看，官方就已经给出了解释。这个不是jmeter的缺陷，这是jmeter的设计使然的。如果变量在开始测试之前已经确定了，我们可以用参数化关联就可以实现。但是如果值时动态生成，每循环一次，值就变化一次，那么怎么弄呢？
 
@@ -17,12 +17,12 @@
 + 第二步：在第一个线程组中，调用一个接口，提取你想要的值存储到一个变量中
 + 第三步：在第一个线程组中，添加一个Beanshell后置处理器，然后再打开菜单栏中的 Tools -> 函数助手对话框(Function Helper Dialog)，在弹窗中，选择__setProperty函数，表达式第一个值输入将要存放的**属性名称(英文)**，第二个值输入你在第二步中定义的变量名称，生成函数。复制函数、关闭弹窗，把函数粘贴到BeanShell后置处理器的Script窗口中。
 
-![p2.jpg](../image/p2.jpg "setproperties")
+![p2.jpg](image/p2.jpg "setproperties")
 
     如果不想用Beanshell处理器，也可以用一个‘用户参数’，任意定义一个参数名称，值中填写 ${__setProperty(qjphone,${rexendphone})},这样也可以。
 + 第四步：在第二个线程组中，添加一个‘用户参数’，添加变量(Add variable),设置变量名称，再次打开函数助手，选择__P函数，在函数的第一个value值文本框中输入${第三步设置**属性名称**}，生成函数，复制函数，关闭弹窗，把它粘贴到添加的变量的值文本框中
 
-![p3.jpg](../image/p3.jpg "useproperties")
+![p3.jpg](image/p3.jpg "useproperties")
 
 + 第五步：在第二个线程组中，接口参数使用定义的变量${变量名称}
 
@@ -39,15 +39,15 @@
 + 第一步：在jmeter中，添加两个**线程组**
 + 第二步：在第一个线程组中，调用接口，然后添加监视器->保存响应到文件，设置保存文件的路径和文件名前缀
 
-![p4.jpg](../image/p4.jpg "savefile")
+![p4.jpg](image/p4.jpg "savefile")
 
 + 第三步：在第二个线程组中，添加一个csv数据文件设置(csv set data config)，文件名设置为第二步中，设置的保存文件路；变量名称自行定义；**分隔符设置为'\t'**(为什么这个地方要用\t，留个作业，请大家思考吧)
 
-![p5.jpg](../image/p5.jpg "csvread")
+![p5.jpg](image/p5.jpg "csvread")
 
 + 第四步：添加正则表达式提取器(或json提取器)，apply to 选择'Jmeter variable Name to use'，然后输入csv读取文件设置的变量名；再编写正则提取式
 
-![p6.jpg](../image/p6.jpg "useregular")
+![p6.jpg](image/p6.jpg "useregular")
 
 + 第五步：在第二个线程组中，添加接口，使用正则提取器中的变量名称
 
