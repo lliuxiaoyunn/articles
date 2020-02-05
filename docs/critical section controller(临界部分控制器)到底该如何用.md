@@ -24,7 +24,7 @@
 
 ![criticalsample](image/criticalsample.jpg)
 
-![criticalsumreport](E:\gitee\bbs-doc\criticalsumreport.jpg)
+![criticalsumreport](image/criticalsumreport.jpg)
 
 <u>第一种方式，整个执行过程只用了4秒种，第二种方式，执行过程耗时13秒，汇总报告中的吞吐量是按每分钟计算。*</u>
 
