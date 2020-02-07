@@ -48,7 +48,8 @@ windows中目前这个解决方案，安装RIDE最新版本非常简单。
 	方法1：反复执行安装命令，直到成功。或者切换网络，反复执行安装命令。
 	方法2：修改pip源为国内源，然后再执行安装命令。推荐用这种方法，因为这种方法，成功率高，安装软件速度快。
 
-有的人员可能安装过RIDE，知道上面两个命令，可以用后面一个就可以，但是这个地方，还是建议大家用两个命令，因为RIDE在1.5版本之后，把robotframework和robotframework-ride分开了。
+有的人员可能安装过RIDE，知道上面两个命令，可以用后面一个就可以，但是这个地方，还是建议大家用两个命令，
+因为RIDE在1.5版本之后，把robotframework和robotframework-ride分开了。
 
 如果是python2环境，安装最新的RIDE可能会出错，解决办法请自行研究。
 ```
@@ -56,7 +57,8 @@ windows中目前这个解决方案，安装RIDE最新版本非常简单。
  安装成功后，只要在dos窗口中，执行：ride.py 即可启动RIDE.
 
 ```
-注意：由于每个人的电脑实际情况不一样，有可能个别人员会出现执行ride.py 无法启动RIDE.那么建议大家找到python3的安装根目录，找到ride.py文件，使用 python ride.py去启动。
+注意：由于每个人的电脑实际情况不一样，有可能个别人员会出现执行ride.py 无法启动RIDE.
+那么建议大家找到python3的安装根目录，找到ride.py文件，使用 python ride.py去启动。
 
 如果还不行，请自行研究解决。
 ```
@@ -148,7 +150,8 @@ source ~/.bashrc
 # 受网络原因，下载可能会很慢
 # 可以自行独立下载，注意 地址中的操作系统、wxpython版本号及对应的
 # python版本要根据你的系统实际情况更改
-sudo pip install -U -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-18.04/wxPython-4.0.7.post2-cp36-cp36m-linux_x86_64.whl wxpython
+sudo pip install -U -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ \
+ubuntu-18.04/wxPython-4.0.7.post2-cp36-cp36m-linux_x86_64.whl wxpython
 
 # 如果已经独立下载，可执行如下：
 sudo pip install -U -f wxPython-4.0.7.post2-cp36-cp36m-linux_x86_64.whl wxpython
