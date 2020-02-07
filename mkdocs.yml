@@ -21,7 +21,7 @@ nav:
                 - '如何使用接口返回的多值': 'jmeter如何使用接口返回的多值.md'
                 - 'jmeter也撒谎': 'jmeter撒的谎你可能已经信以为真了.md'
         - robotframework：
-                - '': ''
+                - 'linux+python3+RIDE安装': 'RIDE可以在linux+python3的环境中运行啦！.md'
 
 theme: readthedocs
 
