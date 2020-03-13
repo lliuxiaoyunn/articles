@@ -28,15 +28,15 @@
 
 ​	先看下，我写好的代码结构：
 
-![Snipaste_20200217_232828](/image/Snipaste_20200217_232828.png)
+![Snipaste_20200217_232828](image/Snipaste_20200217_232828.png)
 
 ​	首先，我们要配置数据库的连接信息，我们可以添加setup线程组，里面放上 JDBC Connection Configuration在这个里面，我们配置上我们用的数据库信息 
 
-![Snipaste_20200217_233233](/image/Snipaste_20200217_233233.png)
+![Snipaste_20200217_233233](image/Snipaste_20200217_233233.png)
 
 ​	然后，我们再在setup线程组中，添加一个JDBC Request，用于创建表。因为，我们创建表只需要执行一次，并不需要执行多次，所有也可以放在setup线程组中。当然，此时的‘仅一次控制器’，你可加可不加。
 
-![Snipaste_20200217_233946](/image/Snipaste_20200217_233946.png)
+![Snipaste_20200217_233946](image/Snipaste_20200217_233946.png)
 
 ```mysql
 CREATE TABLE IF NOT EXISTS  runresult(
@@ -50,21 +50,21 @@ CREATE TABLE IF NOT EXISTS  runresult(
 
 ​	接下来我们就要去掉接口了，添加一个线程组，线程组下，挂你需要的接口，如图，模拟你的真实接口请求：
 
-![Snipaste_20200217_234929](/image/Snipaste_20200217_234929.png)
+![Snipaste_20200217_234929](image/Snipaste_20200217_234929.png)
 
 这个接口，我们使用一个参数，这些参数来源与我们的测试用例，或者其他的数据文档，所以，我们可以在前面再加一个 ‘csv 数据文件设置’
 
-![Snipaste_20200217_235446](/image/Snipaste_20200217_235446.png)
+![Snipaste_20200217_235446](image/Snipaste_20200217_235446.png)
 
 发起了一个接口请求，我们跟期望的是接口请求的响应信息中我们需要的部分信息能被截取保存，对吧，所以，我们再接口请求下面增加一个后置处理器，我这个接口返回的是json格式，所以我用json提取器即可，如果你返回的不是json格式，可以选择自己熟悉的，或者正则提取器这个万能的，也行。
 
-![Snipaste_20200218_000020](/image/Snipaste_20200218_000020.png)
+![Snipaste_20200218_000020](image/Snipaste_20200218_000020.png)
 
 ​	**注意**：<u>json提取器，一次提取多个，中间用分号，同时matchNo和DefaultValue值； 还有，一次提取整个Response的json全部信息，单独用个$即可。</u>
 
 ​	那么，接下来，就是把我们响应的信息，写到数据库中了。
 
-![Snipaste_20200218_001403](/image/Snipaste_20200218_001403.png)
+![Snipaste_20200218_001403](image/Snipaste_20200218_001403.png)
 
 ```mysql
 insert into runresult values('${mobile}','${passwd}','${code}','${msg}','${response}');
@@ -76,7 +76,7 @@ insert into runresult values('${mobile}','${passwd}','${code}','${msg}','${respo
 
 我们再添加一个JDBC Request请求，做导出数据。因为，这个我们也只需要执行一次，不需要方法执行，所以，我们可以添加一个teardown线程组
 
-![Snipaste_20200218_002400](/image/Snipaste_20200218_002400.png)
+![Snipaste_20200218_002400](image/Snipaste_20200218_002400.png)
 
 ```mysql
 select * from runresult into outfile "/var/lib/mysql-files/resul.xlsx" FIELDS TERMINATED BY "\t" ENCLOSED BY '"';
@@ -84,9 +84,9 @@ select * from runresult into outfile "/var/lib/mysql-files/resul.xlsx" FIELDS TE
 
 支持，我们的整个脚本全部写完了。我们run一下，看下
 
-![run_20200218](/image/run_20200218.gif)
+![run_20200218](image/run_20200218.gif)
 
-![Snipaste_20200218_005514](/image/Snipaste_20200218_005514.png)
+![Snipaste_20200218_005514](image/Snipaste_20200218_005514.png)
 
 你这样操作后，都成功了吗？
 
