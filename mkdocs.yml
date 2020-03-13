@@ -20,7 +20,7 @@ nav:
                 - '临界部分控制器使用': 'critical section controller(临界部分控制器)到底该如何用.md'
                 - '如何使用接口返回的多值': 'jmeter如何使用接口返回的多值.md'
                 - 'jmeter也撒谎': 'jmeter撒的慌你可能已经信以为真了.md'
-                - '不写代码jmeter结果写入execl':'不写java代码把jmeter结果写入excel表格.md'
+                - '不写代码jmeter结果写入execl': '不写java代码把jmeter结果写入excel表格.md'
         - robotframework:
                 - 'linux+python3+RIDE安装': 'RIDE可以在linux+python3的环境中运行啦！.md'
 
