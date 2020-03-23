@@ -21,6 +21,7 @@ nav:
                 - '如何使用接口返回的多值': 'jmeter如何使用接口返回的多值.md'
                 - 'jmeter也撒谎': 'jmeter撒的慌你可能已经信以为真了.md'
                 - '不写代码jmeter结果写入execl': '不写java代码把jmeter结果写入excel表格.md'
+                - '用jmeter的GUI生成报告': '图形界面Jmeter也能生成html报告，你知道吗？.md'
         - robotframework:
                 - 'linux+python3+RIDE安装': 'RIDE可以在linux+python3的环境中运行啦！.md'
 
