@@ -38,11 +38,11 @@
 
 首先，我们得添加一个消息头管理器，把1.1的soap请求头，添加在里面
 
-![Snipaste_20200330_192722](image/Snipaste_20200330_233529.png)
+![Snipaste_20200330_233529](image/Snipaste_20200330_233529.png)
 
 然后，我们就是编辑soap sample的取样器了
 
-![Snipaste_20200330_192722](image/Snipaste_20200330_233721.png)
+![Snipaste_20200330_233721](image/Snipaste_20200330_233721.png)
 
 这样一个soap1.1的接口就写好了。
 
