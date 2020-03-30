@@ -23,3 +23,7 @@ jmeter工具，在windows下，用jmeter.bat文件启动，这个大家都知道
 ![Snipaste_20200324_000021](image/Snipaste_20200324_000021.png)
 
 找到.jar文件，选择 Java(TM) Platform SE binary 这样你的系统默认的jar包就是用java来运行了。以后再有jar包，都会是咖啡图标，jmeterbin文件夹中的ApacheJmeter.jar 就可以用双击方式启动了。
+
+---
+
+> 想了解更多有趣，有料的测试相关技能技巧，欢迎关注**柠檬班**微信公众号，或在腾讯课堂中搜索柠檬班机构，观看测试相关视频。

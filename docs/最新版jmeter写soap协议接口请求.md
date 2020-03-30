@@ -19,16 +19,34 @@
   就会出现一个custom soap sampler 的插件，勾选，点击右下角的‘Apply Changes and Restart Jmeter’ 等待下载安装完成，会自动重启。
 
   重启后，添加线程组，右键 > 取样器 
-  
+
 ![SoapSampler_1.png](image/SoapSampler_1.png)
 
 此时，就会看到一个Custom SOAP Sampler的取样器。
+
+## 首先，我们来写个soap1.2版本的接口
 
 ![CoustomSoap_1.png](image/CoustomSoap_1.png)
 
 在这个页面中，URL地址中，输入你要请求的地址(注意：默认soap版本是1.2)，然后在SOAP Envelope中粘贴soap1.2的请求xml。
 
+![Snipaste_20200330_192722](image/Snipaste_20200330_192722.png)
+
 ​	至此，用新版本的jmeter就直接写出了一个soap协议的请求
+
+## 那soap1.1的接口该怎么写呢？
+
+首先，我们得添加一个消息头管理器，把1.1的soap请求头，添加在里面
+
+![Snipaste_20200330_192722](image/Snipaste_20200330_233529.png)
+
+然后，我们就是编辑soap sample的取样器了
+
+![Snipaste_20200330_192722](image/Snipaste_20200330_233721.png)
+
+这样一个soap1.1的接口就写好了。
+
+好了，这个插件的功能你是否已经掌握了呢？
 
 ---
 > 想要获取更多有趣有料的测试知识，欢迎关注 **柠檬班** 微信公众号

@@ -106,6 +106,7 @@ select * from runresult into outfile "/var/lib/mysql-files/resul.xlsx" FIELDS TE
 
 好了，通过这篇文章的学习，你get到其中的思路了吗？
 
-
+---
 
 > 更多有趣有料的测试相关知识，欢迎微信关注 **柠檬班** 微信公众号
+
