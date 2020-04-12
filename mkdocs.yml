@@ -23,8 +23,15 @@ nav:
                 - 'jmeter也撒谎': 'jmeter撒的慌你可能已经信以为真了.md'
                 - '不写代码jmeter结果写入execl': '不写java代码把jmeter结果写入excel表格.md'
                 - '用jmeter的GUI生成报告': '图形界面Jmeter也能生成html报告，你知道吗？.md'
+                - '一个正则提取器提取多个值': 'jmeter用一个正则提取器一次提取多个值的应用.md'
+                - 'jpgc无法下载问题解决办法': 'Jmeter插件jpgc无法下载安装问题解决办法.md'
+                - 'jdbc数据的四种使用方法': 'jmeter获取jdbc数据使用的四种方法.md'
+                - 'jmeter混合场景如何设计': 'Jmeter性能测试如何设计混合场景.md'
+                - 'jmeter如何测试websocket接口': 'jmeter如何测试websocket接口.md'
+                - '自制一个最简单的监控平台': '一行命令，自制一个服务器监控平台.md'
         - robotframework:
                 - 'linux+python3+RIDE安装': 'RIDE可以在linux+python3的环境中运行啦！.md'
+                - 'RIDE中文乱码解决办法与剖析': 'RIDE1.7.4.1版本中文乱码问题解决办法.md'
 
 theme: readthedocs
 

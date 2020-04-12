@@ -26,7 +26,7 @@
 
 ​	第一张，是window下的jmeter获取到的系统所有属性，其中 file.separator 的值是 ‘\’  user.dir 是我jmeter的路径；第二张图是linux系统中，jmeter获取到的所有系统属性，其中file.separator 的值是 ‘/’  user.dir 是我jmeter的路径。
 
-现在应该明白${\_\_P(ser.dir,)}${__P(file.separator,)}userdata1216.txt  这个是什么意思了吧。根据系统不同、jmeter安装路径不同，自动获取jmeter的路径，然后再获取不同系统下的文件路径分隔符，最后跟上文件名称，这样，你在做csv数据读取文件，进行参数化时，就不用担心跨平台，路径不一致问题了，**前提就是你的数据文件要放在jmeter的bin路径下**。
+现在应该明白${\_\_P(user.dir,)}${__P(file.separator,)}userdata1216.txt  这个是什么意思了吧。根据系统不同、jmeter安装路径不同，自动获取jmeter的路径，然后再获取不同系统下的文件路径分隔符，最后跟上文件名称，这样，你在做csv数据读取文件，进行参数化时，就不用担心跨平台，路径不一致问题了，**前提就是你的数据文件要放在jmeter的bin路径下**。
 
 ---
 > 这个知识，是不是很有用呢？更多有趣有料的测试知识，欢迎关注 **柠檬班**微信公众号
