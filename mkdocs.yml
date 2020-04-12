@@ -26,7 +26,7 @@ nav:
                 - '一个正则提取器提取多个值': 'jmeter用一个正则提取器一次提取多个值的应用.md'
                 - 'jpgc无法下载问题解决办法': 'Jmeter插件jpgc无法下载安装问题解决办法.md'
                 - 'jdbc数据的四种使用方法': 'jmeter获取jdbc数据使用的四种方法.md'
-                - 'jmeter混合场景如何设计': 'Jmeter性能测试如何设计混合场景.md'
+                - 'jmeter混合场景如何设计': 'Jmeter性能测试时如何设计混合场景.md'
                 - 'jmeter如何测试websocket接口': 'jmeter如何测试websocket接口.md'
                 - '自制一个最简单的监控平台': '一行命令，自制一个服务器监控平台.md'
         - robotframework:
