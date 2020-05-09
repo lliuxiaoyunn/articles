@@ -100,6 +100,30 @@ select * from runresult into outfile "/var/lib/mysql-files/resul.xlsx" FIELDS TE
 
 如果最后一步，失败，你也不想去纠结，哪就把最后的导出，变成手工去客户端上导出吧。
 
+---
+
+##  升级版
+
+**升级1：**在我们把数据写入数据库时，有同学可能没有数据库，要去安装一个数据库，又会觉得很麻烦。哪我们的升级版，就告诉大家一个，不用安装数据库的办法。把mysql数据库换成sqlite数据库。
+
+首先，去 https://bitbucket.org/xerial/sqlite-jdbc/downloads/ 下载sqlite数据库用的jar包，放到jmeter的\lib\ext文件夹中
+
+![Snipaste_20200509_165931](image/Snipaste_20200509_165931.png)
+
+配置 Database URL：jdbc:sqlite:自己定义一个数据库文件名.db
+
+JDBC Driver class: org.sqlite.JDBC
+
+用户名 和 密码 都不用填
+
+这个，是不是比mysql简单很多呢，**不需要你安装数据库**。
+
+**升级2：**数据写入数据库后，我们想把数据库中的数据导出到execl表格，之前用sql，很多同学会失败。我们换用一种更简单高效的，使用一个jdbc request执行select查询脚本，然后再添加一个 **保存响应到文件** 就可以直接把查询的结果写入xlsx文件。而且还可以自定义标头。
+
+![Snipaste_20200509_171355](image/Snipaste_20200509_171355.png)
+
+**注意：** 文件名称前缀，直接写好输出的文件，同时，勾选不添加数字前缀和不添加内容类型前缀
+
 ## 总结
 
 这种方法，思路很简单，只需要知道jmeter如何调用jdbc接口，就能懂，完全不用写java代码。对于小白来说，还是很有吸引力的，对吧。
