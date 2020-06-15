@@ -29,6 +29,7 @@ nav:
                 - 'jmeter混合场景如何设计': 'Jmeter性能测试时如何设计混合场景.md'
                 - 'jmeter如何测试websocket接口': 'jmeter如何测试websocket接口.md'
                 - '自制一个最简单的监控平台': '一行命令，自制一个服务器监控平台.md'
+                - 'wrk基准测试技能介绍': 'wrk基准测试技能介绍.md'
         - robotframework:
                 - 'linux+python3+RIDE安装': 'RIDE可以在linux+python3的环境中运行啦！.md'
                 - 'RIDE中文乱码解决办法与剖析': 'RIDE1.7.4.1版本中文乱码问题解决办法.md'
