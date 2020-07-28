@@ -32,6 +32,8 @@ nav:
                 - 'wrk基准测试技能介绍': 'wrk基准测试技能介绍.md'
                 - 'MQTT协议如何测试': 'Jmeter如何测试MQTT服务.md'
                 - 'TPS上不去，分析思路': '性能测试TPS上不去问题分析，思路整理.md'
+                - 'ab做性能测试': '一文告诉你ab如何做性能测试.md'
+                - '用docker搭建grafana+influxdb监控平台': 'docker方式搭建grafana+influxdb监控平台.md'
         - locust:
                   - 'locut入门': 'locust入门.md'
                   - 'locust的1时代入门': 'locust的‘1’版本时代入门.md'

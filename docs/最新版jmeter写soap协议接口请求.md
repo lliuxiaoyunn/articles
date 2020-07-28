@@ -50,3 +50,7 @@
 
 ---
 > 想要获取更多有趣有料的测试知识，欢迎关注 **柠檬班** 微信公众号
+
+
+
+[参考源文件]([https://github.com/wohuyuelong/articles/blob/master/jmx/soap%E6%8F%92%E4%BB%B6%E8%84%9A%E6%9C%AC.jmx](https://github.com/wohuyuelong/articles/blob/master/jmx/soap插件脚本.jmx))
