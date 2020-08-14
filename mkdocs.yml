@@ -39,10 +39,10 @@ nav:
                   - 'locust的1时代入门': 'locust的‘1’版本时代入门.md'
         - ngrinder:
                   - '快速写出ngrinder脚本': 'ngrinder入门.md'
-        - 其他工具:
+        + 其他工具:
                   - 'wrk基准测试技能介绍': 'wrk基准测试技能介绍.md'
                   - 'ab做性能测试': '一文告诉你ab如何做性能测试.md'
-        - robotframework:
+        + robotframework:
                 - 'linux+python3+RIDE安装': 'RIDE可以在linux+python3的环境中运行啦！.md'
                 - 'RIDE中文乱码解决办法与剖析': 'RIDE1.7.4.1版本中文乱码问题解决办法.md'
 
