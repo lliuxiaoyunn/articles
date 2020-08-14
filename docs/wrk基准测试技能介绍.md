@@ -56,6 +56,8 @@ Usage: wrk <options> <url>
 
 ## 演示示例
 
+### 案例1：
+
 ```shell
 wy@wy-PC:~/soft/wrk$ ./wrk -t4 -c100 -d60s --latency http://i-beta.cnblogs.com/
 Running 1m test @ http://i-beta.cnblogs.com/
@@ -125,9 +127,42 @@ Req/Sec：每秒请求数
 
 `Transfer/sec:    292.12KB`： 本次测试， 所有请求的平均吞吐量为 292.12KB
 
+### 案例2：
+
+```sh
+[root@iZwz95595 wrk]# ./wrk -t 4 -c 100 -d 20s --latency -s scripts/setup.lua https://www.baidu.com
+thread 1 created
+thread 2 created
+thread 3 created
+thread 4 created
+Running 20s test @ https://www.baidu.com
+  4 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   214.44ms  356.07ms   1.95s    86.84%
+    Req/Sec   109.64     68.70   484.00     64.04%
+  Latency Distribution
+     50%   10.94ms
+     75%  225.43ms
+     90%  647.80ms
+     99%    1.53s
+  8615 requests in 20.08s, 128.85MB read
+  Socket errors: connect 0, read 6, write 0, timeout 138
+Requests/sec:    429.06
+Transfer/sec:      6.42MB
+thread 1 made 2270 requests and got 2244 responses
+thread 2 made 1730 requests and got 1705 responses
+thread 3 made 2478 requests and got 2450 responses
+thread 4 made 2241 requests and got 2216 responses
+
+```
+
+执行带有lua脚本。
+
+在wrk的源码中，script文件夹中，带了一些官方提供的lua文件。这些文件我们可以直接用。
 
 
-想要更深入了解wrk功能，可以在github上 查看帮助文档：<https://github.com/wg/wrk/blob/master/README.md>  对应lua语言，有兴趣的同学，请自行学习。
+
+想要更深入了解wrk功能，可以在github上 查看<a href=https://github.com/wg/wrk/blob/master/README.md>帮助文档 </a>  对应lua语言，有兴趣的同学，请自行学习。
 
 
 
