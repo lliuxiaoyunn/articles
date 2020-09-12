@@ -226,7 +226,7 @@
         <stringProp name="ThreadGroup.delay"></stringProp>
       </PostThreadGroup>
       <hashTree>
-        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC Request" enabled="true">
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="select result" enabled="true">
           <stringProp name="dataSource">indate</stringProp>
           <stringProp name="queryType">Select Statement</stringProp>
           <stringProp name="query">select * from fetchactivitylist</stringProp>

@@ -34,6 +34,8 @@ nav:
                 - '用docker搭建grafana+influxdb监控平台': 'docker方式搭建grafana+influxdb监控平台.md'
                 - 'jmeter面试题剖析实战': '一个jmeter面试题.md'
                 - 'jmeter面向目标的性能场景设计': 'jmeter面向目标的性能场景设计.md'
+                - '网络性能瓶颈分析': '网络性能瓶颈分析，看这篇就够了.md'
+                - '5个前端性能测试工具': '前端性能测试工具.md'
         - locust:
                   - 'locut入门': 'locust入门.md'
                   - 'locust的1时代入门': 'locust的‘1’版本时代入门.md'
