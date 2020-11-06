@@ -41,6 +41,15 @@ nav:
                   - 'locust的1时代入门': 'locust的‘1’版本时代入门.md'
         - ngrinder:
                   - '快速写出ngrinder脚本': 'ngrinder入门.md'
+        - zabbix:
+                  - 'zabbix监控介绍': 'zabbix入门介绍.md'
+                  - 'centos8安装zabbix5': '在centos8中安装zabbix5.0.md'
+                  - 'zabbix添加监控机器': 'zabbix管理界面添加监控机器.md'
+                  - '用zabbix监控被测linux服务器资源': 'centos系统增加zabbix资源监控.md'
+                  - 'zabbix监控模板配置': 'zabbix监控模板配置.md'
+                  - 'zabbix与grafana结合，实现服务器监控': 'zabbix与grafana结合，监控性能测试服务器.md'
+                  - 'prometheus资源监控': 'prometheus监控服务器.md'
+                  - 'zabbix与prometheus比较': 'zabbix与prometheus比较.md'
         - 其他工具:
                   - 'wrk基准测试技能介绍': 'wrk基准测试技能介绍.md'
                   - 'ab做性能测试': '一文告诉你ab如何做性能测试.md'
