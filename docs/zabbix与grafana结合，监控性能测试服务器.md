@@ -20,7 +20,7 @@ grafana可以接入zabbix数据进行展示。
 
 选择一台服务器，安装zabbix-server、zabbix-agent  详见 
 
-[在centos8中安装zabbix]: 
+[在centos8中安装zabbix](https://allenarticles.readthedocs.io/zh_CN/latest/%E5%9C%A8centos8%E4%B8%AD%E5%AE%89%E8%A3%85zabbix5.0/)
 
 
 
@@ -28,7 +28,7 @@ grafana可以接入zabbix数据进行展示。
 
 在被测的服务器上安装 zabbix-agent，详见 
 
-[linux系统增加zabbix资源监控]: 
+[linux系统增加zabbix资源监控](https://allenarticles.readthedocs.io/zh_CN/latest/%E5%9C%A8centos8%E4%B8%AD%E5%AE%89%E8%A3%85zabbix5.0/)
 
 
 

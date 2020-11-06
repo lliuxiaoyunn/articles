@@ -36,6 +36,9 @@ nav:
                 - 'jmeter面向目标的性能场景设计': 'jmeter面向目标的性能场景设计.md'
                 - '网络性能瓶颈分析': '网络性能瓶颈分析，看这篇就够了.md'
                 - '5个前端性能测试工具': '前端性能测试工具.md'
+                - 'nmon最详尽的用法介绍': '一文让你学到nmon最详尽的用法.md'
+                - 'jmeter时间相关转换': 'Jmeter如何把时间戳转为本地时间.md'
+                - '写爬虫，其实不需要懂代码': '写爬虫，要懂代码吗？No.md'
         - locust:
                   - 'locut入门': 'locust入门.md'
                   - 'locust的1时代入门': 'locust的‘1’版本时代入门.md'
@@ -46,16 +49,17 @@ nav:
                   - 'centos8安装zabbix5': '在centos8中安装zabbix5.0.md'
                   - 'zabbix添加监控机器': 'zabbix管理界面添加监控机器.md'
                   - '用zabbix监控被测linux服务器资源': 'centos系统增加zabbix资源监控.md'
-                  - 'zabbix监控模板配置': 'zabbix监控模板配置.md'
+                  - 'zabbix监控模板配置': 'zabbix 监控模板配置.md'
                   - 'zabbix与grafana结合，实现服务器监控': 'zabbix与grafana结合，监控性能测试服务器.md'
                   - 'prometheus资源监控': 'prometheus监控服务器.md'
                   - 'zabbix与prometheus比较': 'zabbix与prometheus比较.md'
         - 其他工具:
                   - 'wrk基准测试技能介绍': 'wrk基准测试技能介绍.md'
                   - 'ab做性能测试': '一文告诉你ab如何做性能测试.md'
-        - robotframework:
+        - 自动化:
                 - 'linux+python3+RIDE安装': 'RIDE可以在linux+python3的环境中运行啦！.md'
                 - 'RIDE中文乱码解决办法与剖析': 'RIDE1.7.4.1版本中文乱码问题解决办法.md'
+                - 'Docker搭建jenkins部署python3界面自动化': '使用Docker搭建Jenkins部署python3项目.md'
 
 theme: readthedocs
 
