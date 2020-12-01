@@ -43,6 +43,8 @@ nav:
                 - '性能工具合集': '性能工具合集.md'
                 - 'JDK_HotSpot特性讲解': 'JDK_HotSpot特性讲解.md'
                 - 'jmap用法': 'jmap用法.md'
+                - '常用软件安装合集': '常用软件安装合集.md'
+                - 'proc文件解读': 'proc文件解读.md'
         - locust:
                   - 'locut入门': 'locust入门.md'
                   - 'locust的1时代入门': 'locust的‘1’版本时代入门.md'
