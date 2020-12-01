@@ -39,6 +39,10 @@ nav:
                 - 'nmon最详尽的用法介绍': '一文让你学到nmon最详尽的用法.md'
                 - 'jmeter时间相关转换': 'Jmeter如何把时间戳转为本地时间.md'
                 - '写爬虫，其实不需要懂代码': '写爬虫，要懂代码吗？No.md'
+        - 其他知识:
+                - '性能工具合集': '性能工具合集.md'
+                - 'JDK_HotSpot特性讲解': 'JDK_HotSpot特性讲解.md'
+                - 'jmap用法': 'jmap用法.md'
         - locust:
                   - 'locut入门': 'locust入门.md'
                   - 'locust的1时代入门': 'locust的‘1’版本时代入门.md'
