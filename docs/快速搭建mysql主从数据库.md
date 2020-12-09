@@ -23,7 +23,7 @@ graph LR
 
 
 ```
-
+![mysql_2020-12-09_14-15-01](image/mysql_2020-12-09_14-15-01.png)
 ## 搭建mysql主从复制
 
 首先，我们准备一台linux机器(以centos7为例)，在linux中安装docker，用docker创建数据mysql数据库的master和slave。
@@ -76,7 +76,7 @@ docker run -itd --restart always --name  mysql-slave -p 3308:3306 -e MYSQL_ROOT_
 
 #### 用Navicat等客户端连接mysql-master主数据库
 
-![mysql_2020-12-08_15-34-34](image\mysql_2020-12-08_15-34-34.png)
+![mysql_2020-12-08_15-34-34](image/mysql_2020-12-08_15-34-34.png)
 
 #### 创建主从复制账号
 
@@ -86,7 +86,7 @@ GRANT REPLICATION SLAVE ON *.* TO 'backup'@'%' IDENTIFIED BY 'backup';
 SHOW GRANTS FOR 'backup'@'%';
 ```
 
-![mysql_2020-12-08_15-43-28](image\mysql_2020-12-08_15-43-28.png)
+![mysql_2020-12-08_15-43-28](image/mysql_2020-12-08_15-43-28.png)
 
 #### 修改容器的mysqld.cnf
 
@@ -167,11 +167,11 @@ MASTER_PASSWORD='backup';
 START SLAVE;
 ```
 
-![mysql_2020-12-08_18-49-17](image\mysql_2020-12-08_18-49-17.png)
+![mysql_2020-12-08_18-49-17](image/mysql_2020-12-08_18-49-17.png)
 
 成功后，再执行
 
-![mysql_2020-12-08_18-51-10](image\mysql_2020-12-08_18-51-10.png)
+![mysql_2020-12-08_18-51-10](image/mysql_2020-12-08_18-51-10.png)
 
 看到**Slave_IO_Runing、Slave_SQL_Runing**都是**Yes**说明已经配置成功
 
