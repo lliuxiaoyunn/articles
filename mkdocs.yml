@@ -54,6 +54,7 @@ nav:
         - zabbix:
                   - 'zabbix监控介绍': 'zabbix入门介绍.md'
                   - 'centos8安装zabbix5': '在centos8中安装zabbix5.0.md'
+                  - 'centos7搭建zabbix5.0': 'centos7+zabbix5.0+nginx+mysql安装方法.md'
                   - 'zabbix添加监控机器': 'zabbix管理界面添加监控机器.md'
                   - '用zabbix监控被测linux服务器资源': 'centos系统增加zabbix资源监控.md'
                   - 'zabbix监控模板配置': 'zabbix 监控模板配置.md'
