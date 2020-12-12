@@ -204,7 +204,7 @@ systemctl restart zabbix-server zabbix-agent rh-nginx116-nginx rh-php72-php-fpm
 
 ## grafana+zabbix
 
-[可参考](./zabbix与grafana结合，监控性能测试服务器/)
+[可参考](../zabbix与grafana结合，监控性能测试服务器/)
 
 ```sh
 # 下载grafana
@@ -228,10 +228,10 @@ systemctl restart grafana-server
 
 ## zabbix监控被测服务器
 
-[参考](./prometheus监控服务器)
+[参考](../prometheus监控服务器)
 
 
 
 ## zabbix监控模板配置
 
-[参考](./zabbix监控模板配置)
+[参考](../zabbix 监控模板配置)
