@@ -1,5 +1,15 @@
 # centos7 + zabbix5.0 + mysql5.7 + nginx + grafana安装
 
+
+
+| 版本 | 事件   | 内容                      | 编撰         | 时间       |
+| ---- | ------ | ------------------------- | ------------ | ---------- |
+| V1.0 | N-新增 | 新增内容                  | 柠檬班-Allen | 2020-12-10 |
+| V1.1 | M-修改 |                           | 柠檬班-Allen | 2020-12-16 |
+| V1.2 | M-修改 | 修改命令和grafana插件安装 | 柠檬班-Allen | 2020-12-18 |
+
+
+
 [TOC]
 
 ## 准备centos7 系统
@@ -17,12 +27,12 @@ yum install wget vim gcc*-y
 ```sh
 # 直接安装
 wget -i -c http://dev.mysql.com/get/mysql57-community-release-el7-10.noarch.rpm
-yum -y install mysql57-community-release-el7-10.noarch.rpm
+yum install mysql57-community-release-el7-10.noarch.rpm -y
 
 # 上面操作亦可为
 rpm -Uvh http://dev.mysql.com/get/mysql57-community-release-el7-10.noarch.rpm
 
-
+wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-community-server-5.7.32-1.el7.x86_64.rpm
 yum -y install mysql-community-server
 
 # 启动mysql
@@ -98,7 +108,7 @@ yum install zabbix-release-5.0-1.el7.noarch.rpm -y
 wget http://repo.zabbix.com/zabbix/5.0/rhel/7/x86_64/zabbix-server-mysql-5.0.6-1.el7.x86_64.rpm
 yum install zabbix-server-mysql-5.0.6-1.el7.x86_64.rpm -y
 
-
+wget http://repo.zabbix.com/zabbix/5.0/rhel/7/x86_64/zabbix-agent-5.0.6-1.el7.x86_64.rpm
 yum install zabbix-agent-5.0.6-1.el7.x86_64.rpm -y
 
 yum install centos-release-scl -y
@@ -220,9 +230,29 @@ grafana-cli plugins install alexanderzobnin-zabbix-app
 systemctl restart grafana-server
 ```
 
+如果出错
+
+![grafana_2020-12-18_19-16-04](image/grafana_2020-12-18_19-16-04.png)
+
+可以手动下载 https://grafana.com/api/plugins/alexanderzobnin-zabbix-app/versions/4.0.2 去这个地址，下载插件zip包
+
+然后上传到linux机器的  /var/lib/grafana/plugins 文件夹下，解压包到当前文件夹
+
+![grafana_2020-12-18_19-19-27](image/grafana_2020-12-18_19-19-27.png)
+
+然后再修改  /etc/grafana/grafana.ini  增加如下
+
+```ini
+allow_loading_unsigned_plugins=alexanderzobnin-zabbix-datasource
+```
+
+![grafana_2020-12-18_19-23-40](E:\gitee\github\articles\docs\image\grafana_2020-12-18_19-23-40.png)
+
+然后再重启动 granfana `systemctl restart grafana-server`
+
 再在grafana的平台中，选择plugin管理，选择启用zabbix
 
-再添加database，选择zabbix
+再添加database[[参考](http://testingpai.com/article/1598326763124)]，选择zabbix
 
 在引入模板
 
