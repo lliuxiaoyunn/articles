@@ -90,6 +90,8 @@ jstat -<option> [-t] [-h<lines>] <vmid> [<interval>] [<count>]
 
 -gcutil：监视内容与-gc基本相同，但输出主要关注已使用空间占总空间的百分比
 
+ > 案例： jstat -gcutil 1388 1000	// 间隔 1k毫秒显示一次gc信息
+
 -gccause：与-gcutil功能一样，但是会额外输出导致上一次GC产生的原因
 
 -gcnew：监视新生代GC状况
