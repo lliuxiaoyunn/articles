@@ -62,6 +62,13 @@ nav:
                   - 'zabbix与grafana结合，实现服务器监控': 'zabbix与grafana结合，监控性能测试服务器.md'
                   - 'prometheus资源监控': 'prometheus监控服务器.md'
                   - 'zabbix与prometheus比较': 'zabbix与prometheus比较.md'
+        - gra-prometheus:
+            - 'prometheus语法': 'prometheus语法.md'
+            - 'prometheus监控硬件资源': 'grafana+prometheus监控服务器硬件资源.md'
+            - 'prometheus监控tomcat': 'grafana+prometheus+tomcat监控.md'
+            - 'prometheus监控nginx': 'grafana+prometheus+nginx监控负载均衡.md'
+            - 'prometheus监控mysql': 'grafana+prometheus+mysql 监控关系型数据库.md'
+            - 'prometheus监控redis': 'grafana+prometheus+redis 监控缓存数据库.md'
         - 其他工具:
                   - 'wrk基准测试技能介绍': 'wrk基准测试技能介绍.md'
                   - 'ab做性能测试': '一文告诉你ab如何做性能测试.md'
