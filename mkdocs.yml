@@ -59,7 +59,11 @@ nav:
                   - 'zabbix与grafana结合，实现服务器监控': 'zabbix与grafana结合，监控性能测试服务器.md'
                   - 'prometheus资源监控': 'prometheus监控服务器.md'
                   - 'zabbix与prometheus比较': 'zabbix与prometheus比较.md'
-        - gra-prometheus:
+        - 数据库:
+            - 'mysql主从数据库': '快速搭建mysql主从数据库.md'
+        - 性能监控:
+            - '自制一个最简单的监控平台': '一行命令，自制一个服务器监控平台.md'
+            - 'nmon最详尽的用法介绍': '一文让你学到nmon最详尽的用法.md'
             - '用docker搭建grafana+influxdb监控平台': 'docker方式搭建grafana+influxdb监控平台.md'
             - 'prometheus语法': 'prometheus语法.md'
             - 'prometheus监控硬件资源': 'grafana+prometheus监控服务器硬件资源.md'
@@ -67,9 +71,6 @@ nav:
             - 'prometheus监控nginx': 'grafana+prometheus+nginx监控负载均衡.md'
             - 'prometheus监控mysql': 'grafana+prometheus+mysql 监控关系型数据库.md'
             - 'prometheus监控redis': 'grafana+prometheus+redis 监控缓存数据库.md'
-        - 性能监控:
-            - '自制一个最简单的监控平台': '一行命令，自制一个服务器监控平台.md'
-            - 'nmon最详尽的用法介绍': '一文让你学到nmon最详尽的用法.md'
         - 其他性能工具:
                   - 'wrk基准测试技能介绍': 'wrk基准测试技能介绍.md'
                   - 'ab做性能测试': '一文告诉你ab如何做性能测试.md'
