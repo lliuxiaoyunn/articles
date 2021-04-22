@@ -113,11 +113,11 @@ vim prometheus.yml
 
 在首页，选择 add you first database，选择prometheus，填写信息确定保存
 
-![grafana_2021-01-08_14-47-21](image\grafana_2021-01-08_14-47-21.png)
+![grafana_2021-01-08_14-47-21](image/grafana_2021-01-08_14-47-21.png)
 
 左侧菜单栏 import 
 
-![grafana_2021-01-08_14-58-55](image\grafana_2021-01-08_14-58-55.png)
+![grafana_2021-01-08_14-58-55](image/grafana_2021-01-08_14-58-55.png)
 
 输入模板id 763，确定
 
