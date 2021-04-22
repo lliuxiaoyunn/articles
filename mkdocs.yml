@@ -28,15 +28,12 @@ nav:
                 - 'jdbc数据的四种使用方法': 'jmeter获取jdbc数据使用的四种方法.md'
                 - 'jmeter混合场景如何设计': 'Jmeter性能测试时如何设计混合场景.md'
                 - 'jmeter如何测试websocket接口': 'jmeter如何测试websocket接口.md'
-                - '自制一个最简单的监控平台': '一行命令，自制一个服务器监控平台.md'
                 - 'MQTT协议如何测试': 'Jmeter如何测试MQTT服务.md'
                 - 'TPS上不去，分析思路': '性能测试TPS上不去问题分析，思路整理.md'
-                - '用docker搭建grafana+influxdb监控平台': 'docker方式搭建grafana+influxdb监控平台.md'
                 - 'jmeter面试题剖析实战': '一个jmeter面试题.md'
                 - 'jmeter面向目标的性能场景设计': 'jmeter面向目标的性能场景设计.md'
                 - '网络性能瓶颈分析': '网络性能瓶颈分析，看这篇就够了.md'
                 - '5个前端性能测试工具': '前端性能测试工具.md'
-                - 'nmon最详尽的用法介绍': '一文让你学到nmon最详尽的用法.md'
                 - 'jmeter时间相关转换': 'Jmeter如何把时间戳转为本地时间.md'
                 - '写爬虫，其实不需要懂代码': '写爬虫，要懂代码吗？No.md'
         - 其他知识:
@@ -63,13 +60,17 @@ nav:
                   - 'prometheus资源监控': 'prometheus监控服务器.md'
                   - 'zabbix与prometheus比较': 'zabbix与prometheus比较.md'
         - gra-prometheus:
+            - '用docker搭建grafana+influxdb监控平台': 'docker方式搭建grafana+influxdb监控平台.md'
             - 'prometheus语法': 'prometheus语法.md'
             - 'prometheus监控硬件资源': 'grafana+prometheus监控服务器硬件资源.md'
             - 'prometheus监控tomcat': 'grafana+prometheus+tomcat监控.md'
             - 'prometheus监控nginx': 'grafana+prometheus+nginx监控负载均衡.md'
             - 'prometheus监控mysql': 'grafana+prometheus+mysql 监控关系型数据库.md'
             - 'prometheus监控redis': 'grafana+prometheus+redis 监控缓存数据库.md'
-        - 其他工具:
+        - 性能监控:
+            - '自制一个最简单的监控平台': '一行命令，自制一个服务器监控平台.md'
+            - 'nmon最详尽的用法介绍': '一文让你学到nmon最详尽的用法.md'
+        - 其他性能工具:
                   - 'wrk基准测试技能介绍': 'wrk基准测试技能介绍.md'
                   - 'ab做性能测试': '一文告诉你ab如何做性能测试.md'
         - 自动化:
