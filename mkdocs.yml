@@ -61,6 +61,13 @@ nav:
                   - 'zabbix与prometheus比较': 'zabbix与prometheus比较.md'
         - 数据库:
             - 'mysql主从数据库': '快速搭建mysql主从数据库.md'
+            - 'mysql数据库索引': '数据库索引.md'
+            - 'mysql中sql语法': 'mysql中sql用法.md'
+            - 'mysql中重要的配置参数': 'mysql中重要的配置参数.md'
+            - 'mysql数据库分表分区': 'mysql数据库分表分区.md'
+            - 'redis入门': 'redis入门.md'
+            - 'redis基础知识': 'redis 基础知识.md'
+            - 'jmeter测试redis': 'jmeter测试redis.md'
         - 性能监控:
             - '自制一个最简单的监控平台': '一行命令，自制一个服务器监控平台.md'
             - 'nmon最详尽的用法介绍': '一文让你学到nmon最详尽的用法.md'

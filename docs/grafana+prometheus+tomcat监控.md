@@ -8,7 +8,7 @@ tomcat作为java项目首选的部署容器，还是非常受大家欢迎的。�
 
 浏览器访问：https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/
 
-![tomcat_2020-11-19_16-40-33](image\tomcat_2020-11-19_16-40-33.png)
+![tomcat_2020-11-19_16-40-33](image/tomcat_2020-11-19_16-40-33.png)
 
 页面中显示了多个版本，可以根据自己需要选择版本，找到你需要的jar包下载地址：https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/0.14.0/jmx_prometheus_javaagent-0.14.0.jar
 
@@ -119,7 +119,7 @@ vim prometheus.yml
 # 30188是前面在tomcat中配置的监控端口
 ```
 
-![tomcat_2020-11-19_17-36-16](image\tomcat_2020-11-19_17-36-16.png)
+![tomcat_2020-11-19_17-36-16](image/tomcat_2020-11-19_17-36-16.png)
 
 > 注意：如果被监控的服务器和 安装了prometheus的机器不是同一台，还需要保证机器间网络和防火墙通畅
 
@@ -131,13 +131,13 @@ vim prometheus.yml
 
 在浏览器中访问： http://prometheus机器ip:9090
 
-![tomcat_2020-11-19_17-47-12](image\tomcat_2020-11-19_17-47-12.png)
+![tomcat_2020-11-19_17-47-12](image/tomcat_2020-11-19_17-47-12.png)
 
 > 注意：prometheus机器的防火墙要开放9090端口，浏览器才能正常访问
 
 想查看prometheus监控jvm信息，可以在界面中执行，jvm_info
 
-![tomcat_2020-11-19_17-49-35](image\tomcat_2020-11-19_17-49-35.png)
+![tomcat_2020-11-19_17-49-35](image/tomcat_2020-11-19_17-49-35.png)
 
 ## 启动grafana
 
@@ -149,19 +149,19 @@ vim prometheus.yml
 
 添加datasource，选择prometheus，配置信息，保存
 
-![tomcat_2020-11-19_17-58-33](image\tomcat_2020-11-19_17-58-33.png)
+![tomcat_2020-11-19_17-58-33](image/tomcat_2020-11-19_17-58-33.png)
 
 引入模板
 
-![tomcat_2020-11-19_18-00-58](image\tomcat_2020-11-19_18-00-58.png)
+![tomcat_2020-11-19_18-00-58](image/tomcat_2020-11-19_18-00-58.png)
 
 可以输入：<font color='blue'>**8563**</font>
 
-![tomcat_8563-1](image\tomcat_8563-1.png)![tomcat_2020-11-20_14-27-54](image\tomcat_2020-11-20_14-27-54.png)
+![tomcat_8563-1](image/tomcat_8563-1.png)![tomcat_2020-11-20_14-27-54](image/tomcat_2020-11-20_14-27-54.png)
 
 或者可以用：<font color='blue'>**3457**</font>
 
-![tomcat_3457-1](image\tomcat_3457-1.png)![tomcat_3457-2](image\tomcat_3457-2.png)
+![tomcat_3457-1](image/tomcat_3457-1.png)![tomcat_3457-2](image/tomcat_3457-2.png)
 
 
 
